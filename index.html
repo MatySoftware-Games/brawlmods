@@ -5,7 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Games APK free</title>
   <style>
-    /* Celé pozadí s obrázkem */
+    @keyframes pulse {
+      0% { transform: scale(1); text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
+      50% { transform: scale(1.05); text-shadow: 0 0 20px rgba(255, 204, 0, 0.9); }
+      100% { transform: scale(1); text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
+    }
+
+    @keyframes colorChange {
+      0% { color: #ffcc00; }
+      50% { color: #ff6600; }
+      100% { color: #ffcc00; }
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,7 +39,7 @@
       text-align: center;
     }
     .logo {
-      width: 200px; /* zvětšené logo */
+      width: 200px;
       height: auto;
       margin-bottom: 25px;
       border-radius: 10px;
@@ -38,16 +49,16 @@
       font-size: 32px;
       margin: 0 0 20px 0;
       color: #ffcc00;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      animation: pulse 2.5s infinite, colorChange 3s infinite;
     }
     h2 {
       font-size: 22px;
       margin: 0 0 30px 0;
-      color: #ffffff;
       background-color: rgba(255, 255, 255, 0.12);
       padding: 12px;
       border-radius: 10px;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      animation: colorChange 3s infinite;
     }
     button {
       padding: 14px 30px;
