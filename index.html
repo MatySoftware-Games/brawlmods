@@ -11,13 +11,13 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     color: white;
-    background: linear-gradient(-45deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(-45deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
   }
 
   @keyframes gradientBG {
@@ -123,7 +123,7 @@
   }
 </style>
 </head>
-<body>
+<body id="body">
 
 <nav>
   <a onclick="showNullsBrawl()">Nulls Brawl</a>
@@ -140,21 +140,29 @@
 
 <script>
   function showNullsBrawl() {
-    document.body.style.background = "linear-gradient(-45deg, #ff4e50, #f9d423, #24c6dc, #514a9d)";
+    let body = document.getElementById("body");
+    body.style.background = "linear-gradient(-45deg, #ff4e50, #f9d423, #24c6dc, #514a9d)";
+    body.style.backgroundSize = "400% 400%";
+    body.style.animation = "gradientBG 15s ease infinite";
     document.getElementById("logo").src = "https://nullsbrawl-apkindir.com.tr/wp-content/uploads/2025/01/unnamed-file.png";
     document.getElementById("title").innerText = "Nulls Brawl v61.249";
     document.getElementById("download-button").href = "https://www.dropbox.com/scl/fi/fduv5cyahioav8p8j38tp/nb_61.249u1_fp.apk?rlkey=yd98do5j48b47zkbxx3iidxvi&st=k4lffr4q&dl=1";
   }
 
   function showBrawlStars() {
-    document.body.style.background = "url('https://i.redd.it/cbi7rxkf3uv51.jpg') center/cover no-repeat";
+    let body = document.getElementById("body");
+    body.style.background = "url('https://i.redd.it/cbi7rxkf3uv51.jpg') center/cover no-repeat";
+    body.style.animation = "none"; // Zastav animaci gradientu
     document.getElementById("logo").src = "https://play-lh.googleusercontent.com/UDvJF8oLGUgWWnZ3jzYPLAVfIzM5oY62_EhDQ6lKvOPDzZ3nFfHe6GKmYjr-DkWWGaA";
     document.getElementById("title").innerText = "Brawl Stars v61.319";
     document.getElementById("download-button").href = "https://www.dropbox.com/scl/fi/ly0trcntm8samz94ncrh8/Brawl-Stars_61.319_APKPure.xapk?rlkey=iqblilqfmiii9o1ny7x2jf9jj&st=h90p6nfi&dl=1";
   }
 
   function showRoblox() {
-    document.body.style.background = "linear-gradient(-45deg, #e52d27, #b31217, #7b4397, #dc2430)";
+    let body = document.getElementById("body");
+    body.style.background = "linear-gradient(-45deg, #e52d27, #b31217, #7b4397, #dc2430)";
+    body.style.backgroundSize = "400% 400%";
+    body.style.animation = "gradientBG 15s ease infinite";
     document.getElementById("logo").src = "https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.jpg";
     document.getElementById("title").innerText = "Roblox (APK)";
     document.getElementById("download-button").href = "#"; // zatím žádný soubor
