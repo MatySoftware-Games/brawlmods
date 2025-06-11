@@ -1,90 +1,111 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Games App Free</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url('https://articles-img.sftcdn.net/auto-mapping-folder/sites/3/2023/01/nulls-brawl.jpg') no-repeat center center fixed;
-      background-size: cover;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-    }
-    nav {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 15px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffcc00;
-    }
-    header img {
-      margin-top: 20px;
-      max-width: 200px;
-      height: auto;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    h1 {
-      font-size: 28px;
-      margin: 20px 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 15px;
-      animation: colorchange 4s infinite alternate;
-    }
-    @keyframes colorchange {
-      0% { color: #ff0000; }
-      20% { color: #ff9900; }
-      40% { color: #ffff00; }
-      60% { color: #00ff00; }
-      80% { color: #00ffff; }
-      100% { color: #ff00ff; }
-    }
-    .download-button {
-      display: inline-block;
-      padding: 15px 30px;
-      font-size: 20px;
-      background: linear-gradient(45deg, #ffcc00, #ff6600);
-      color: #000;
-      text-decoration: none;
-      border-radius: 30px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.5);
-      transition: transform 0.2s, background 0.3s;
-      margin-top: 30px;
-    }
-    .download-button:hover {
-      transform: scale(1.05);
-      background: linear-gradient(45deg, #ff6600, #ffcc00);
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Games App Free</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease;
+  }
+  nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+  nav a:hover {
+    color: #ffcc00;
+  }
+  header img {
+    margin-top: 20px;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    animation: colorchange 4s infinite alternate;
+  }
+  @keyframes colorchange {
+    0% { color: #ff0000; }
+    20% { color: #ff9900; }
+    40% { color: #ffff00; }
+    60% { color: #00ff00; }
+    80% { color: #00ffff; }
+    100% { color: #ff00ff; }
+  }
+  .download-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: transform 0.2s, background 0.3s;
+    margin-top: 30px;
+  }
+  .download-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #ff6600, #ffcc00);
+  }
+</style>
 </head>
 <body>
-  <nav>
-    <a href="#">Nulls Brawl</a>
-    <a href="#">Brawl Stars</a>
-  </nav>
 
-  <header>
-    <img src="https://nullsbrawl-apkindir.com.tr/wp-content/uploads/2025/01/unnamed-file.png" alt="Nulls Brawl Logo">
-  </header>
+<nav>
+  <a onclick="showNullsBrawl()">Nulls Brawl</a>
+  <a onclick="showBrawlStars()">Brawl Stars</a>
+</nav>
 
-  <h1>Nulls Brawl v61.249</h1>
+<header>
+  <img id="logo" src="https://nullsbrawl-apkindir.com.tr/wp-content/uploads/2025/01/unnamed-file.png" alt="Logo">
+</header>
 
-  <a class="download-button" href="https://www.dropbox.com/scl/fi/fduv5cyahioav8p8j38tp/nb_61.249u1_fp.apk?rlkey=yd98do5j48b47zkbxx3iidxvi&st=k4lffr4q&dl=1" download>Stáhnout APK</a>
+<h1 id="title">Nulls Brawl v61.249</h1>
+
+<a id="download-button" class="download-button" href="https://www.dropbox.com/scl/fi/fduv5cyahioav8p8j38tp/nb_61.249u1_fp.apk?rlkey=yd98do5j48b47zkbxx3iidxvi&st=k4lffr4q&dl=1" download>Stáhnout APK</a>
+
+<script>
+  function showNullsBrawl() {
+    document.body.style.background = "url('https://articles-img.sftcdn.net/auto-mapping-folder/sites/3/2023/01/nulls-brawl.jpg') no-repeat center center fixed";
+    document.body.style.backgroundSize = "cover";
+    document.getElementById("logo").src = "https://nullsbrawl-apkindir.com.tr/wp-content/uploads/2025/01/unnamed-file.png";
+    document.getElementById("title").innerText = "Nulls Brawl v61.249";
+    document.getElementById("download-button").href = "https://www.dropbox.com/scl/fi/fduv5cyahioav8p8j38tp/nb_61.249u1_fp.apk?rlkey=yd98do5j48b47zkbxx3iidxvi&st=k4lffr4q&dl=1";
+  }
+
+  function showBrawlStars() {
+    document.body.style.background = "url('https://static.wikia.nocookie.net/logopedia/images/e/ed/Dgyydddd.jpg/revision/latest?cb=20191225003949') no-repeat center center fixed";
+    document.body.style.backgroundSize = "cover";
+    document.getElementById("logo").src = "https://play-lh.googleusercontent.com/UDvJF8oLGUgWWnZ3jzYPLAVfIzM5oY62_EhDQ6lKvOPDzZ3nFfHe6GKmYjr-DkWWGaA";
+    document.getElementById("title").innerText = "Brawl Stars v61.319";
+    document.getElementById("download-button").href = "#"; // Nahraď odkazem pro Brawl Stars, pokud máš
+  }
+</script>
+
 </body>
 </html>
