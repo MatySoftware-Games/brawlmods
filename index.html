@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Games App Free</title>
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 <style>
   body {
@@ -12,33 +11,39 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     color: white;
-    text-align: center;
     background: linear-gradient(-45deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
-    transition: background 0.5s ease;
   }
+
   @keyframes gradientBG {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
   }
+
   nav {
     background: rgba(0, 0, 0, 0.6);
-    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
   }
+
   nav a {
     color: white;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 10px 15px;
     font-size: 18px;
     font-weight: 700;
     transition: color 0.3s;
     cursor: pointer;
   }
+
   nav a:hover {
     color: #ffcc00;
   }
+
   header img {
     margin-top: 20px;
     max-width: 200px;
@@ -48,14 +53,15 @@
     margin-right: auto;
     animation: fadeIn 2s ease forwards;
   }
+
   @keyframes fadeIn {
     0% {opacity: 0; transform: scale(0.8);}
     100% {opacity: 1; transform: scale(1);}
   }
+
   h1 {
-    font-size: 32px;
-    margin: 20px 0;
-    display: inline-block;
+    font-size: 28px;
+    margin: 20px auto;
     padding: 10px 20px;
     border-radius: 15px;
     background: linear-gradient(90deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
@@ -64,15 +70,17 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   @keyframes gradientText {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
   }
+
   .download-button {
     display: inline-block;
-    padding: 15px 35px;
-    font-size: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
     font-weight: 700;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
@@ -80,12 +88,30 @@
     border-radius: 50px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
-    margin-top: 30px;
+    margin: 20px auto;
   }
+
   .download-button:hover {
     background: linear-gradient(135deg, #2575fc, #6a11cb);
     transform: translateY(-3px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  @media screen and (max-width: 600px) {
+    nav a {
+      font-size: 16px;
+      margin: 8px 10px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    .download-button {
+      font-size: 16px;
+      padding: 12px 25px;
+    }
+    header img {
+      max-width: 150px;
+    }
   }
 </style>
 </head>
@@ -94,6 +120,7 @@
 <nav>
   <a onclick="showNullsBrawl()">Nulls Brawl</a>
   <a onclick="showBrawlStars()">Brawl Stars</a>
+  <a onclick="showRoblox()">Roblox</a>
 </nav>
 
 <header>
@@ -107,18 +134,23 @@
 <script>
   function showNullsBrawl() {
     document.body.style.background = "linear-gradient(-45deg, #ff4e50, #f9d423, #24c6dc, #514a9d)";
-    document.body.style.backgroundSize = "400% 400%";
     document.getElementById("logo").src = "https://nullsbrawl-apkindir.com.tr/wp-content/uploads/2025/01/unnamed-file.png";
     document.getElementById("title").innerText = "Nulls Brawl v61.249";
     document.getElementById("download-button").href = "https://www.dropbox.com/scl/fi/fduv5cyahioav8p8j38tp/nb_61.249u1_fp.apk?rlkey=yd98do5j48b47zkbxx3iidxvi&st=k4lffr4q&dl=1";
   }
 
   function showBrawlStars() {
-    document.body.style.background = "linear-gradient(-45deg, #24c6dc, #514a9d, #ff4e50, #f9d423)";
-    document.body.style.backgroundSize = "400% 400%";
+    document.body.style.background = "url('https://i.redd.it/cbi7rxkf3uv51.jpg') center/cover no-repeat";
     document.getElementById("logo").src = "https://play-lh.googleusercontent.com/UDvJF8oLGUgWWnZ3jzYPLAVfIzM5oY62_EhDQ6lKvOPDzZ3nFfHe6GKmYjr-DkWWGaA";
     document.getElementById("title").innerText = "Brawl Stars v61.319";
     document.getElementById("download-button").href = "https://www.dropbox.com/scl/fi/ly0trcntm8samz94ncrh8/Brawl-Stars_61.319_APKPure.xapk?rlkey=iqblilqfmiii9o1ny7x2jf9jj&st=h90p6nfi&dl=1";
+  }
+
+  function showRoblox() {
+    document.body.style.background = "linear-gradient(-45deg, #e52d27, #b31217, #7b4397, #dc2430)";
+    document.getElementById("logo").src = "https://www.citypng.com/public/uploads/preview/hd-roblox-square-android-ios-app-logo-icon-png-70175169478746776ph2tfiuz.png";
+    document.getElementById("title").innerText = "Roblox (APK)";
+    document.getElementById("download-button").href = "#"; // zatím žádný soubor
   }
 </script>
 
