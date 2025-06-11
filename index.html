@@ -15,6 +15,9 @@
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @keyframes gradientBG {
@@ -28,6 +31,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
     padding: 10px;
   }
 
@@ -45,13 +49,16 @@
     color: #ffcc00;
   }
 
-  header img {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
+  }
+
+  header img {
     max-width: 250px;
     height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     animation: fadeIn 2s ease forwards;
   }
 
@@ -126,9 +133,8 @@
 
 <header>
   <img id="logo" src="https://nullsbrawl-apkindir.com.tr/wp-content/uploads/2025/01/unnamed-file.png" alt="Logo">
+  <h1 id="title">Nulls Brawl v61.249</h1>
 </header>
-
-<h1 id="title">Nulls Brawl v61.249</h1>
 
 <a id="download-button" class="download-button" href="https://www.dropbox.com/scl/fi/fduv5cyahioav8p8j38tp/nb_61.249u1_fp.apk?rlkey=yd98do5j48b47zkbxx3iidxvi&st=k4lffr4q&dl=1" download>Stáhnout APK</a>
 
