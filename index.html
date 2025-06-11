@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Games App Free</title>
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 <style>
   body {
     margin: 0;
@@ -13,12 +13,18 @@
     font-family: 'Poppins', sans-serif;
     color: white;
     text-align: center;
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(-45deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     transition: background 0.5s ease;
   }
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
   nav {
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     padding: 15px;
   }
   nav a {
@@ -26,7 +32,7 @@
     text-decoration: none;
     margin: 0 20px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     transition: color 0.3s;
     cursor: pointer;
   }
@@ -40,29 +46,34 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    animation: fadeIn 2s ease forwards;
+  }
+  @keyframes fadeIn {
+    0% {opacity: 0; transform: scale(0.8);}
+    100% {opacity: 1; transform: scale(1);}
   }
   h1 {
-    font-size: 28px;
+    font-size: 32px;
     margin: 20px 0;
-    background-color: rgba(0, 0, 0, 0.6);
     display: inline-block;
     padding: 10px 20px;
     border-radius: 15px;
-    animation: colorchange 4s infinite alternate;
+    background: linear-gradient(90deg, #ff4e50, #f9d423, #24c6dc, #514a9d);
+    background-size: 400% 400%;
+    animation: gradientText 6s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-  @keyframes colorchange {
-    0% { color: #ff0000; }
-    20% { color: #ff9900; }
-    40% { color: #ffff00; }
-    60% { color: #00ff00; }
-    80% { color: #00ffff; }
-    100% { color: #ff00ff; }
+  @keyframes gradientText {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
   }
   .download-button {
     display: inline-block;
     padding: 15px 35px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
     text-decoration: none;
@@ -95,16 +106,16 @@
 
 <script>
   function showNullsBrawl() {
-    document.body.style.background = "url('https://articles-img.sftcdn.net/auto-mapping-folder/sites/3/2023/01/nulls-brawl.jpg') no-repeat center center fixed";
-    document.body.style.backgroundSize = "cover";
+    document.body.style.background = "linear-gradient(-45deg, #ff4e50, #f9d423, #24c6dc, #514a9d)";
+    document.body.style.backgroundSize = "400% 400%";
     document.getElementById("logo").src = "https://nullsbrawl-apkindir.com.tr/wp-content/uploads/2025/01/unnamed-file.png";
     document.getElementById("title").innerText = "Nulls Brawl v61.249";
     document.getElementById("download-button").href = "https://www.dropbox.com/scl/fi/fduv5cyahioav8p8j38tp/nb_61.249u1_fp.apk?rlkey=yd98do5j48b47zkbxx3iidxvi&st=k4lffr4q&dl=1";
   }
 
   function showBrawlStars() {
-    document.body.style.background = "url('https://i.redd.it/cbi7rxkf3uv51.jpg') no-repeat center center fixed";
-    document.body.style.backgroundSize = "cover";
+    document.body.style.background = "linear-gradient(-45deg, #24c6dc, #514a9d, #ff4e50, #f9d423)";
+    document.body.style.backgroundSize = "400% 400%";
     document.getElementById("logo").src = "https://play-lh.googleusercontent.com/UDvJF8oLGUgWWnZ3jzYPLAVfIzM5oY62_EhDQ6lKvOPDzZ3nFfHe6GKmYjr-DkWWGaA";
     document.getElementById("title").innerText = "Brawl Stars v61.319";
     document.getElementById("download-button").href = "https://www.dropbox.com/scl/fi/ly0trcntm8samz94ncrh8/Brawl-Stars_61.319_APKPure.xapk?rlkey=iqblilqfmiii9o1ny7x2jf9jj&st=h90p6nfi&dl=1";
