@@ -1,96 +1,90 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Games APK free</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games App Free</title>
   <style>
-    @keyframes pulse {
-      0% { transform: scale(1); text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
-      50% { transform: scale(1.05); text-shadow: 0 0 20px rgba(255, 255, 255, 0.9); }
-      100% { transform: scale(1); text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
-    }
-
-    @keyframes rainbowColors {
-      0% { color: #ff0000; }    /* Red */
-      16% { color: #ff9900; }   /* Orange */
-      32% { color: #ffff00; }   /* Yellow */
-      48% { color: #00ff00; }   /* Green */
-      64% { color: #00ccff; }   /* Cyan */
-      80% { color: #9900ff; }   /* Purple */
-      100% { color: #ff0000; }  /* Back to Red */
-    }
-
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 0;
       background: url('https://articles-img.sftcdn.net/auto-mapping-folder/sites/3/2023/01/nulls-brawl.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      padding: 20px;
-    }
-    .container {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 450px;
-      width: 100%;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      font-family: Arial, sans-serif;
+      color: white;
       text-align: center;
     }
-    .logo {
-      width: 200px;
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    header img {
+      margin-top: 20px;
+      max-width: 200px;
       height: auto;
-      margin-bottom: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     h1 {
-      font-size: 32px;
-      margin: 0 0 20px 0;
-      animation: pulse 2.5s infinite, rainbowColors 5s infinite;
+      font-size: 28px;
+      margin: 20px 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 15px;
+      animation: colorchange 4s infinite alternate;
     }
-    h2 {
-      font-size: 22px;
-      margin: 0 0 30px 0;
-      background-color: rgba(255, 255, 255, 0.12);
-      padding: 12px;
-      border-radius: 10px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-      animation: rainbowColors 5s infinite;
+    @keyframes colorchange {
+      0% { color: #ff0000; }
+      20% { color: #ff9900; }
+      40% { color: #ffff00; }
+      60% { color: #00ff00; }
+      80% { color: #00ffff; }
+      100% { color: #ff00ff; }
     }
-    button {
-      padding: 14px 30px;
-      font-size: 18px;
-      background: linear-gradient(45deg, #ff6600, #ffcc00);
-      color: black;
-      border: none;
-      border-radius: 35px;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    button:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 20px rgba(255, 204, 0, 0.8);
-    }
-    a {
+    .download-button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 20px;
+      background: linear-gradient(45deg, #ffcc00, #ff6600);
+      color: #000;
       text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      transition: transform 0.2s, background 0.3s;
+      margin-top: 30px;
+    }
+    .download-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #ff6600, #ffcc00);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="logo" src="https://nullsbrawl-apkindir.com.tr/wp-content/uploads/2025/01/unnamed-file.png" alt="Nulls Brawl logo" />
-    <h1>Games APK free</h1>
-    <h2>Nulls Brawl v61.249</h2>
-    <a href="https://www.dropbox.com/scl/fi/fduv5cyahioav8p8j38tp/nb_61.249u1_fp.apk?rlkey=yd98do5j48b47zkbxx3iidxvi&st=k4lffr4q&dl=1" download>
-      <button>📥 Stáhnout APK</button>
-    </a>
-  </div>
+  <nav>
+    <a href="#">Nulls Brawl</a>
+    <a href="#">Brawl Stars</a>
+  </nav>
+
+  <header>
+    <img src="https://nullsbrawl-apkindir.com.tr/wp-content/uploads/2025/01/unnamed-file.png" alt="Nulls Brawl Logo">
+  </header>
+
+  <h1>Nulls Brawl v61.249</h1>
+
+  <a class="download-button" href="https://www.dropbox.com/scl/fi/fduv5cyahioav8p8j38tp/nb_61.249u1_fp.apk?rlkey=yd98do5j48b47zkbxx3iidxvi&st=k4lffr4q&dl=1" download>Stáhnout APK</a>
 </body>
 </html>
